@@ -1,0 +1,22 @@
+//
+// Prefix header for all source files of the 'Reverb' target in the 'Reverb' project
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_4_0
+#warning "This project uses features only available in iOS SDK 4.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+#endif
+
+#if DEBUG
+#  define LOG(...) NSLog(__VA_ARGS__)
+#  define LOG_METHOD NSLog(@"%s", __func__)
+#else
+#  define LOG(...) ;
+#  define LOG_METHOD ;
+#endif
